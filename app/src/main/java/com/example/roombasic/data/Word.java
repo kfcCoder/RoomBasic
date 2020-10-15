@@ -1,5 +1,6 @@
 package com.example.roombasic.data;
 
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
@@ -14,6 +15,17 @@ public class Word {
 
     @ColumnInfo(name = "chinese_meaning")
     private String chineseMeaning;
+
+    @ColumnInfo(name = "chinese_invisible", defaultValue = "0")
+    private boolean chineseInvisible;
+
+    public void setChineseInvisible(boolean chineseInvisible) {
+        this.chineseInvisible = chineseInvisible;
+    }
+
+    public boolean isChineseInvisible() {
+        return chineseInvisible;
+    }
 
     public Word(String word, String chineseMeaning) {
         this.word = word;

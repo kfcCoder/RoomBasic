@@ -14,6 +14,9 @@ import com.example.roombasic.repository.WordRepository;
 
 import java.util.List;
 
+/**
+ * How to create table with init value ??
+ */
 public class WordViewModel extends AndroidViewModel {
     private WordRepository repository;
 
